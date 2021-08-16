@@ -54,11 +54,13 @@ plusMinusButton.addEventListener('click',() =>{
 
 const displayNumber = (number) => {
     if (number === "." && currentDisplayText.innerText.includes(".")) return;
-    currentDisplayText.innerText = Number(currentDisplayText.innerText + number).toLocaleString("en");
-            
+    //currentDisplayText.innerText = Number(currentDisplayText.innerText.replace(",","") + number).toLocaleString("en");
+    currentDisplayText.innerText = (currentDisplayText.innerText+ number).toLocaleString();
+             
 };
 // convert number to string
 // split into integer & decimal digitsa
+// number = currentDi
 
 
 
@@ -75,7 +77,11 @@ const doMath = (operator) =>{
             result = prev - current;
             break;
         case "÷":
-            result = prev / current;
+            if (current === 0){
+                result = "NO Cheating the universe"
+            } else{
+                result = prev / current;
+            }
             break;
         case "x":
             result = prev * current;

@@ -21,9 +21,10 @@ body{
     justify-content: center;
     padding: 0 2px 20px 2px;
     border: solid silver 1px;
+    word-wrap: break-word;
 
 }
-
+#test{color:white;}
 #time{
     color: white;
     padding: 15px 0 0 30px;
